@@ -30,27 +30,6 @@ public class ProfileActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//
-//        setContentView(R.layout.activity_homepage);
-//
-//        final TextView homepage_username = (TextView) findViewById(R.id.homepage_username);
-//        final TextView welcomeMessage = (TextView) findViewById(R.id.homepage_welcome);
-//        Intent intent = getIntent();
-//        String username = intent.getStringExtra("username");
-//
-//        String message = username + " welcome to your user area";
-//        welcomeMessage.setText(message);
-//        homepage_username.setText(username);
-//            }
-//        });
-
-
         final TextView homepage_username = (TextView) findViewById(R.id.homepage_username);
         final TextView welcomeMessage = (TextView) findViewById(R.id.homepage_welcome);
         Intent intent = getIntent();
@@ -107,7 +86,22 @@ public class ProfileActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        //Adding our menu to toolbar
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
 
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+        if (id == R.id.menuLogout) {
+            //calling logout method when the logout button is clicked
+            logout();
+        }
+        return super.onOptionsItemSelected(item);
+    }
 
 
 
