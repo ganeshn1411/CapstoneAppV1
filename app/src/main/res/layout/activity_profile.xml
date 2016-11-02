@@ -71,12 +71,21 @@
 
         <TextView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/homepage_username"
             android:layout_toEndOf="@+id/homepage_username"
             android:layout_marginTop="75dp"
             android:id="@+id/homepage_welcome"
             android:textSize="18sp" />
+
+        <Button
+            android:text="Start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="184dp"
+            android:id="@+id/homepage_start_button" />
 
     </RelativeLayout>
 

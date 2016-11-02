@@ -9,6 +9,7 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 import android.content.Context;
 import android.content.DialogInterface;
@@ -38,6 +39,15 @@ public class ProfileActivity extends AppCompatActivity {
         String message = username + " welcome to your user area";
         welcomeMessage.setText(message);
         homepage_username.setText(username);
+
+        Button button = (Button) findViewById(R.id.homepage_start_button);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent startIntent = new Intent(ProfileActivity.this, ActivityDetailsTest.class);
+                startActivity(startIntent);
+            }
+        });
     }
 
 
