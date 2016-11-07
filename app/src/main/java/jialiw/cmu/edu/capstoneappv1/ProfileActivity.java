@@ -34,7 +34,7 @@ public class ProfileActivity extends AppCompatActivity {
         final TextView homepage_username = (TextView) findViewById(R.id.homepage_username);
         final TextView welcomeMessage = (TextView) findViewById(R.id.homepage_welcome);
         Intent intent = getIntent();
-        String username = intent.getStringExtra("username");
+        final String username = intent.getStringExtra("username");
 
         String message = username + " welcome to your user area";
         welcomeMessage.setText(message);
@@ -44,7 +44,8 @@ public class ProfileActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent startIntent = new Intent(ProfileActivity.this, ActivityDetailsTest.class);
+                Intent startIntent = new Intent(ProfileActivity.this, ExcelFileImportTest.class);
+                startIntent.putExtra("username", username);
                 startActivity(startIntent);
             }
         });
