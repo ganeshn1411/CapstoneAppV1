@@ -44,7 +44,7 @@ public class ProfileActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent startIntent = new Intent(ProfileActivity.this, ExcelFileImportTest.class);
+                Intent startIntent = new Intent(ProfileActivity.this, ActivityDetailsTest.class);
                 startIntent.putExtra("username", username);
                 startActivity(startIntent);
             }

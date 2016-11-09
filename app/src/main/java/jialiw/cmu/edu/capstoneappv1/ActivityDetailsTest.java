@@ -86,12 +86,12 @@ public class ActivityDetailsTest extends AppCompatActivity {
                 Log.i("line 83", "start test arraylist");
                 String procedureId = "", processTime = "";
                 int processId = -1;
-                Iterator<String> itr = resultList.iterator();
-                while (itr.hasNext()){
-                    procedureId = itr.next();
-                    processId = Integer.parseInt(itr.next());
-                    processTime = itr.next();
-                }
+//                Iterator<String> itr = resultList.iterator();
+//                while (itr.hasNext()){
+//                    procedureId = itr.next();
+//                    processId = Integer.parseInt(itr.next());
+//                    processTime = itr.next();
+//                }
 
                 ActivityTestRequest1 activityTestRequest1 = new ActivityTestRequest1(username,procedureId, processId, processTime, responseListener );
                 RequestQueue queue = Volley.newRequestQueue(ActivityDetailsTest.this);
