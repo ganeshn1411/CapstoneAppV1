@@ -29,4 +29,5 @@ dependencies {
     compile 'com.android.volley:volley:1.0.0'
     testCompile 'junit:junit:4.12'
     compile files('libs/poi-3.12.jar')
+    compile files('libs/gson-2.3.1.jar')
 }
